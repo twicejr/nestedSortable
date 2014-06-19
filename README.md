@@ -22,6 +22,7 @@ Also:
 - All jQuery Sortable options, events and methods are available
 - It is possible to define elements that will not accept a new nested item/list and a maximum depth for nested items
 - The root level can be protected
+- It is possible to lock the parentship of items, so that only re-ordering them is possible. Like a family tree.
 
 ## Usage
 
