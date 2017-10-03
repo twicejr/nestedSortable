@@ -3,6 +3,8 @@
 **nestedSortable** is a jQuery plugin that extends jQuery Sortable UI functionalities to nested lists.  
 *Note: Version 2.0 is published in branch '2.0alpha' and is available for testing. At the moment it has only been tested in Firefox and Chrome, if you work with IE feel free to give it a shot and let me know if something goes wrong.*
 
+## Meteor Installation
+    meteor add ilikenwf:nested-sortable
 
 ## What's new in version 2.0
 
@@ -22,6 +24,7 @@ Also:
 - All jQuery Sortable options, events and methods are available
 - It is possible to define elements that will not accept a new nested item/list and a maximum depth for nested items
 - The root level can be protected
+- The parentship of items can be locked, just as if it was a family tree. 
 
 ## Usage
 
@@ -60,6 +63,8 @@ Also, the default list type is `<ol>`.
 ## Custom Options
 
 <dl>
+	<dt>disableParentChange (2.0)</dt>
+	<dd>Set this to true to lock the parentship of items. They can only be re-ordered within theire current parent container.</dd>
 	<dt>doNotClear (2.0)</dt>
 	<dd>Set this to true if you don't want empty lists to be removed. Default: <b>false</b></dd>
 	<dt>expandOnHover (2.0)</dt>
@@ -139,7 +144,9 @@ Also, the default list type is `<ol>`.
 '2' ...
 	'id' => itemId
 </pre>
-	Similarly to <code>toArray</code>, it accepts <b>attribute</b> and <b>expression</b> options.</dd>
+	Similarly to <code>toArray</code>, it accepts <b>attribute</b> and <b>expression</b> options.
+	Optionally adding `data-` attributes will cause them to show up in the hierarchy. See demo for example.
+	</dd>
 </dl>
 
 ## Events
